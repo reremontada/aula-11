@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React com CDN</title>
+
+    
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+
+      .container {
+        border: 1px solid #ccc;
+        padding: 15px;
+        border-radius: 5px;
+      }
+
+      h1 {
+        color: navy;
+      }
+    </style>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    
+    <script type="text/babel">
+      function App() {
+        const nomeUsuario = "Aluno LPV";
+
+        return (
+          <div className="container">
+            <h1>{nomeUsuario} - Primeiro App</h1>
+            <p>Este é meu primeiro aplicativo em React!</p>
+            <p>Usuário: {nomeUsuario}</p>
+
+            <h2>Coisas que gosto:</h2>
+            <ul>
+              <li>Programar</li>
+              <li>Aprender novas tecnologias</li>
+              <li>Ouvir música</li>
+            </ul>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
